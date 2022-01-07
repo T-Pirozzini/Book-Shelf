@@ -17,8 +17,6 @@ newBook.addEventListener('submit', function(e){
 
   const readBtn = document.createElement('button')
 
-  //TOGGLE READ STATUS
-  
   
   //ADD CONTENT    
   bookTitle.textContent = addTitle;
@@ -30,7 +28,11 @@ newBook.addEventListener('submit', function(e){
   bookTitle.classList.add('name');
   bookAuthor.classList.add('author');
   bookPages.classList.add('pages');
-  removeBtn.classList.add('remove'); 
+  removeBtn.classList.add('remove');
+  readBtn.classList.add('read');
+  
+  //CLEAR FORM
+  newBook.reset();
 
   //APPEND TO DOM
   li.appendChild(bookTitle);
@@ -43,6 +45,13 @@ newBook.addEventListener('submit', function(e){
   infoDiv.appendChild(status);
   infoDiv.appendChild(checkBox);     
 })
+
+
+//TOGGLE READ STATUS
+// readBtn.addEventListener('onClick', toggleRead = () => {
+//   const btn = document.querySelector('.read');
+//   btn.classList.toggle('.read');
+// });
 
 
 // REMOVE A BOOK
@@ -83,3 +92,53 @@ class Book {
     this.booksRead = 0;
   }
 };
+
+// Second Attempt
+
+
+
+
+// ADD BOOK
+// const form = document.querySelector('#new-book');
+// const addBtn = document.querySelector('.add-btn');
+
+// addBtn.addEventListener('sumbit', e => {
+//   e.preventDefault();
+// });
+
+// addBtn.addEventListener('click', () => {  
+//   const title = form.title.value.trim();
+//   const author = form.author.value.trim();
+//   const pages = form.pages.value.trim();
+//   if(title.length){
+//     addBook(title, author, pages);
+//     form.reset();
+//   }
+// });
+
+// const addBook = (title, author, pages) => {
+//   const submission = `
+//     <li>
+//       <h4 class='book-name'>${title.toUpperCase()}</h4>
+//       <div>
+//         <p><span class='em-bold'>Author: </span>${author}</p>
+//         <p><span class='em-bold'>Pages: </span>${pages}</p>
+//         <p><span class='em-bold'>Read: </span><input type='checkbox' name='checkbox'><button class='remove-btn'>REMOVE</button></p>
+//       </div>
+//     </li>   
+//     `;
+//   bookContainer.innerHTML += submission;
+// };
+
+
+// // REMOVE BOOK
+// const removeBtn = document.querySelector('.remove-btn');
+// const bookContainer = document.querySelector('.book-container');
+// const book = document.querySelector('.book');
+
+// removeBtn.addEventListener('click', e => {  
+//   console.log(book, bookContainer);
+//   if(e.target.classList.contains('remove-btn')){
+//     book.remove();    
+//   } 
+// });

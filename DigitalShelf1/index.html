@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Project</title>
+  <link rel='stylesheet' href='style.css'>  
+    
+</head>
+
+<body> 
+
+  <div id='container-main'>
+
+    <div id='book-container'>
+      <h2 class='header'>Digital Book Shelf</h2>    
+        <ul class='book-container'>
+          <li class='book'>
+            <h4 class='book-name'>THE SHINING</h4>     
+            <div>
+              <p><span class='em-bold author'>Author: </span>Stephen King</p>
+              <p><span class='em-bold pages'>Pages: </span>688</p>
+              <p><span class='em-bold read'>Read: </span><input type='checkbox' name='checkbox'><button class='remove-btn'>REMOVE</button></p>
+            </div>                     
+          </li>          
+      </ul>    
+  </div>
+
+  
+  <form id='new-book'>
+    <h1 id='heading'>New Book</h1>     
+    <input id='title' type='text' name='title' placeholder='What is the title?' required autocomplete="off">
+    <input id='author' type='text' name='author' placeholder='Who is the author?' required autocomplete="off">
+    <input id='pages' type='text' name='pages' placeholder='How many pages?' required autocomplete="off">
+    <p>Have you finished reading this book? <input id='status' type='checkbox' name='checkbox'></p>    
+    <div id="add-book"><button class='add-btn'>ADD BOOK</button></div>       
+  </form>
+  <form id='search-bar'>
+    <input type='text' placeholder='Search for a book...'/>
+  </form>        
+  
+  
+    <div class='footer'>Travis Pirozzini 2021</div>
+  </div>
+    
+  
+  
+  
+  <script type='text/javascript' src='script2.js'></script>
+</body>
+</html>
