@@ -7,6 +7,6 @@ Honing my HTML/CSS/JS Skills - A simple book shelf/library web app.
 
 ## :camera: Screenshot
 Home
-![Home]()
+![Home](https://github.com/T-Pirozzini/library/blob/main/assets/library-home.png?raw=true)
 
 ## Odin Project Course Content
